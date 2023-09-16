@@ -4,11 +4,11 @@ var itemDisplayTwo = document.querySelector(".item-2");
 var itemDisplayThree = document.querySelector(".item-3");
 var itemDisplayFour = document.querySelector(".item-4");
 
-var questionAsk;
+/*var questionAsk;
 var questionOptionOne;
 var questionOptionTwo;
 var questionOptionThree;
-var questionOptionFour;
+var questionOptionFour;*/
 var randomQuestionSelect;
 var selectedQuestion;
 
@@ -139,6 +139,7 @@ function changeItem(){
         /* change selected question */
     selectedQuestion = randomQuestionSelect;   
     /* set questions equal to the selected question and the selected question's answer */
+    /*
     questionAsk = selectedQuestion.question
     questionOptionOne = selectedQuestion.answerOne
     questionOptionTwo = selectedQuestion.answerTwo
@@ -150,6 +151,16 @@ function changeItem(){
     itemDisplayTwo.textContent = questionOptionTwo
     itemDisplayThree.textContent = questionOptionThree
     itemDisplayFour.textContent = questionOptionFour
+    */
+
+
+    questionDisplay.textContent = selectedQuestion.question
+    itemDisplayOne.textContent = selectedQuestion.answerOne
+    itemDisplayTwo.textContent = selectedQuestion.answerTwo
+    itemDisplayThree.textContent = selectedQuestion.answerThree
+    itemDisplayFour.textContent = selectedQuestion.answerFour
+
+    /* refactorduplication code */
 
 }
 
