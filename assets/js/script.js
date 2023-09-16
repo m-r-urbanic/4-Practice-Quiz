@@ -20,14 +20,15 @@ var objectTest = {
 }
 
 var objectTestTwo = {
-    answerOne:"One",
-    answerTwo:":)",
-    answerThree: "Question",
-    answerFour: "Test"
+    answerOne:":(",
+    answerTwo:"mtest",
+    answerThree: "Testing",
+    answerFour: "Yay"
 }
 
 /* change selected question */
-selectedQuestion = objectTest
+selectedQuestion = objectTestTwo
+
 
 
 console.log(selectedQuestion.answerOne)
@@ -35,6 +36,11 @@ console.log(selectedQuestion.answerTwo)
 console.log(selectedQuestion.answerThree)
 console.log(selectedQuestion.answerFour)
 
+/* set questions equal to the selected question and the selected question's answer */
+questionOptionOne = selectedQuestion.answerOne
+questionOptionTwo = selectedQuestion.answerTwo
+questionOptionThree = selectedQuestion.answerThree
+questionOptionFour = selectedQuestion.answerFour
 
 /* Change list items based on question selected */
 function changeItem(){
