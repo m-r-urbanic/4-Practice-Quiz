@@ -1,10 +1,10 @@
-
-
+var questionDisplay = document.querySelector(".question-provided")
 var itemDisplayOne = document.querySelector(".item-1")
 var itemDisplayTwo = document.querySelector(".item-2")
 var itemDisplayThree = document.querySelector(".item-3")
 var itemDisplayFour = document.querySelector(".item-4")
 
+var questionAsk
 var questionOptionOne
 var questionOptionTwo
 var questionOptionThree
@@ -99,13 +99,14 @@ questionArray = [questionOne, questionTwo, questionThree, questionFour, question
 selectedQuestion = questionOne
 
 
-
+console.log(selectedQuestion.question)
 console.log(selectedQuestion.answerOne)
 console.log(selectedQuestion.answerTwo)
 console.log(selectedQuestion.answerThree)
 console.log(selectedQuestion.answerFour)
 
 /* set questions equal to the selected question and the selected question's answer */
+questionAsk = selectedQuestion.question
 questionOptionOne = selectedQuestion.answerOne
 questionOptionTwo = selectedQuestion.answerTwo
 questionOptionThree = selectedQuestion.answerThree
@@ -113,6 +114,7 @@ questionOptionFour = selectedQuestion.answerFour
 
 /* Change list items based on question selected */
 function changeItem(){
+    questionDisplay.textContent = questionAsk
     itemDisplayOne.textContent = questionOptionOne
     itemDisplayTwo.textContent = questionOptionTwo
     itemDisplayThree.textContent = questionOptionThree
