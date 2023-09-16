@@ -10,10 +10,11 @@ var questionOptionTwo
 var questionOptionThree
 var questionOptionFour
 var selectedQuestion
+var questionArray
 
 /* create questions and answers as selectable objects */
 var questionOne = {
-    question:"insert here",
+    question:"One",
     answerOne:"One",
     answerTwo:":)",
     answerThree: "Question",
@@ -21,7 +22,7 @@ var questionOne = {
 }
 
 var questionTwo = {
-    question:"insert here",
+    question:"Two",
     answerOne:":(",
     answerTwo:"mtest",
     answerThree: "Testing",
@@ -29,7 +30,7 @@ var questionTwo = {
 }
 
 var questionThree = {
-    question:"insert here",
+    question:"Three",
     answerOne:"One",
     answerTwo:":)",
     answerThree: "Question",
@@ -37,6 +38,7 @@ var questionThree = {
 }
 
 var questionFour = {
+    question:"Four",
     answerOne:":(",
     answerTwo:"mtest",
     answerThree: "Testing",
@@ -44,7 +46,7 @@ var questionFour = {
 }
 
 var questionFive = {
-    question:"insert here",
+    question:"five",
     answerOne:"One",
     answerTwo:":)",
     answerThree: "Question",
@@ -52,7 +54,7 @@ var questionFive = {
 }
 
 var questionSix = {
-    question:"insert here",
+    question:"six",
     answerOne:":(",
     answerTwo:"mtest",
     answerThree: "Testing",
@@ -60,7 +62,7 @@ var questionSix = {
 }
 
 var questionSeven = {
-    question:"insert here",
+    question:"seven",
     answerOne:"One",
     answerTwo:":)",
     answerThree: "Question",
@@ -68,14 +70,14 @@ var questionSeven = {
 }
 
 var questionEight = {
-    question:"insert here",
+    question:"eight",
     answerOne:":(",
     answerTwo:"mtest",
     answerThree: "Testing",
     answerFour: "Yay"
 }
 var questionNine = {
-    question:"insert here",
+    question:"nine",
     answerOne:"One",
     answerTwo:":)",
     answerThree: "Question",
@@ -83,7 +85,7 @@ var questionNine = {
 }
 
 var questionTen = {
-    question:"insert here",
+    question:"ten",
     answerOne:":(",
     answerTwo:"mtest",
     answerThree: "Testing",
@@ -91,7 +93,7 @@ var questionTen = {
 }
 
 /* make array of possible questions */
-const questionArray = [questionOne, questionTwo, questionThree, questionFour, questionFive, questionSix, questionSeven, questionEight, questionNine, questionTen];
+questionArray = [questionOne, questionTwo, questionThree, questionFour, questionFive, questionSix, questionSeven, questionEight, questionNine, questionTen];
 
 /* change selected question */
 selectedQuestion = questionOne
@@ -119,5 +121,15 @@ function changeItem(){
 }
 
 console.log(questionArray[2]);
+
+// create function that gets a random type
+function getRandom(arr) {
+    return arr[Math.floor(Math.random() * arr.length)]
+}
+
+// select random question using the random function
+let randomQuestionSelect = getRandom(Object.values(questionArray));
+
+console.log(randomQuestionSelect);
 
 changeItem();
