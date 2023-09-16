@@ -20,7 +20,8 @@ var questionOne = {
     answerOne:"One",
     answerTwo:":)",
     answerThree: "Question",
-    answerFour: "Test"
+    answerFour: "Test",
+    correct: 1
 }
 
 var questionTwo = {
@@ -28,7 +29,8 @@ var questionTwo = {
     answerOne:":(",
     answerTwo:"mtest",
     answerThree: "Testing",
-    answerFour: "Yay"
+    answerFour: "Yay",
+    correct: 2
 }
 
 var questionThree = {
@@ -36,7 +38,8 @@ var questionThree = {
     answerOne:"One",
     answerTwo:":)",
     answerThree: "Question",
-    answerFour: "Test"
+    answerFour: "Test",
+    correct: 4
 }
 
 var questionFour = {
@@ -44,7 +47,8 @@ var questionFour = {
     answerOne:":(",
     answerTwo:"mtest",
     answerThree: "Testing",
-    answerFour: "Yay"
+    answerFour: "Yay",
+    correct: 1
 }
 
 var questionFive = {
@@ -52,7 +56,8 @@ var questionFive = {
     answerOne:"One",
     answerTwo:":)",
     answerThree: "Question",
-    answerFour: "Test"
+    answerFour: "Test",
+    correct: 3
 }
 
 var questionSix = {
@@ -60,7 +65,8 @@ var questionSix = {
     answerOne:":(",
     answerTwo:"mtest",
     answerThree: "Testing",
-    answerFour: "Yay"
+    answerFour: "Yay",
+    correct: 4
 }
 
 var questionSeven = {
@@ -68,7 +74,8 @@ var questionSeven = {
     answerOne:"One",
     answerTwo:":)",
     answerThree: "Question",
-    answerFour: "Test"
+    answerFour: "Test",
+    correct: 3
 }
 
 var questionEight = {
@@ -76,14 +83,16 @@ var questionEight = {
     answerOne:":(",
     answerTwo:"mtest",
     answerThree: "Testing",
-    answerFour: "Yay"
+    answerFour: "Yay",
+    correct: 1
 }
 var questionNine = {
     question:"nine",
     answerOne:"One",
     answerTwo:":)",
     answerThree: "Question",
-    answerFour: "Test"
+    answerFour: "Test",
+    correct: 4
 }
 
 var questionTen = {
@@ -91,7 +100,8 @@ var questionTen = {
     answerOne:":(",
     answerTwo:"mtest",
     answerThree: "Testing",
-    answerFour: "Yay"
+    answerFour: "Yay",
+    correct: 3
 }
 
 /* make array of possible questions */
@@ -111,33 +121,15 @@ function giveQuestion(){
     console.log(randomQuestionSelect);
 }
 
-giveQuestion();
-/* change selected question */
-selectedQuestion = randomQuestionSelect;
-
-
-console.log(selectedQuestion.question)
-console.log(selectedQuestion.answerOne)
-console.log(selectedQuestion.answerTwo)
-console.log(selectedQuestion.answerThree)
-console.log(selectedQuestion.answerFour)
-
-giveQuestion();
-
-
-console.log(selectedQuestion.question)
-console.log(selectedQuestion.answerOne)
-console.log(selectedQuestion.answerTwo)
-console.log(selectedQuestion.answerThree)
-console.log(selectedQuestion.answerFour)
 
 
 /* Change list items based on question selected */
 function changeItem(){
     giveQuestion();
 
-        /* change selected question */
-    selectedQuestion = randomQuestionSelect;   
+    /* change selected question */
+    selectedQuestion = randomQuestionSelect;  
+
     /* set questions equal to the selected question and the selected question's answer */
     /*
     questionAsk = selectedQuestion.question
@@ -161,10 +153,31 @@ function changeItem(){
     itemDisplayFour.textContent = selectedQuestion.answerFour
 
     /* refactorduplication code */
+    function isTrueOne(){
+        if (selectedQuestion.correct == 1)
+        {
+            console.log("true");
+        }
+        else
+        {
+            console.log("false");
+        }
+    }
+    isTrueOne();
+    
 
 }
 
 changeItem();
 
-var testButton = document.querySelector(".new-question");
-testButton.addEventListener("click", changeItem);
+var optionOneClick = document.querySelector(".item-1");
+optionOneClick.addEventListener("click", changeItem);
+
+var optionTwoClick = document.querySelector(".item-2");
+optionTwoClick.addEventListener("click", changeItem);
+
+var optionThreeClick = document.querySelector(".item-3");
+optionThreeClick.addEventListener("click", changeItem);
+
+var optionFourClick = document.querySelector(".item-4");
+optionFourClick.addEventListener("click", changeItem);
