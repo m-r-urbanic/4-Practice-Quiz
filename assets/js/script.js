@@ -9,15 +9,31 @@ var questionOptionOne
 var questionOptionTwo
 var questionOptionThree
 var questionOptionFour
+var selectedQuestion
 
-function setQuestion(){
-    questionOptionOne = "One"
-    questionOptionTwo = ":)"
-    questionOptionThree = "Question"
-    questionOptionFour = "Test"
+/* create questions and answers as selectable objects */
+var objectTest = {
+    answerOne:"One",
+    answerTwo:":)",
+    answerThree: "Question",
+    answerFour: "Test"
 }
 
-setQuestion();
+var objectTestTwo = {
+    answerOne:"One",
+    answerTwo:":)",
+    answerThree: "Question",
+    answerFour: "Test"
+}
+
+/* change selected question */
+selectedQuestion = objectTest
+
+
+console.log(selectedQuestion.answerOne)
+console.log(selectedQuestion.answerTwo)
+console.log(selectedQuestion.answerThree)
+console.log(selectedQuestion.answerFour)
 
 
 /* Change list items based on question selected */
