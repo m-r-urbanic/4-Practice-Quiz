@@ -152,32 +152,88 @@ function changeItem(){
     itemDisplayThree.textContent = selectedQuestion.answerThree
     itemDisplayFour.textContent = selectedQuestion.answerFour
 
-    /* refactorduplication code */
-    function isTrueOne(){
-        if (selectedQuestion.correct == 1)
-        {
-            console.log("true");
-        }
-        else
-        {
-            console.log("false");
-        }
-    }
-    isTrueOne();
+    /* refactorduplicated code */
+
     
 
 }
 
 changeItem();
 
+function isTrueOne(){
+    if (selectedQuestion.correct == 1)
+    {
+        console.log("true");
+    }
+    else
+    {
+        console.log("false");
+    }
+}
+isTrueOne();
+    /* refactorduplication code */
+function isTrueTwo(){
+    if (selectedQuestion.correct == 2)
+    {
+        console.log("true");
+    }
+    else
+    {
+        console.log("false");
+    }
+}
+
+function isTrueThree(){
+    if (selectedQuestion.correct == 3)
+    {
+        console.log("true");
+    }
+    else
+    {
+        console.log("false");
+    }
+}
+
+
+function isTrueFour(){
+    if (selectedQuestion.correct == 4)
+    {
+        console.log("true");
+    }
+    else
+    {
+        console.log("false");
+    }
+}
+
+function functionOne() {
+    isTrueOne();
+    changeItem();
+}
+
+function functionTwo() {
+    isTrueTwo();
+    changeItem();
+}
+
+function functionThree() {
+    isTrueThree();
+    changeItem();
+}
+
+function functionFour() {
+    isTrueFour();
+    changeItem();
+}
+
 var optionOneClick = document.querySelector(".item-1");
-optionOneClick.addEventListener("click", changeItem);
+optionOneClick.addEventListener("click", functionOne);
 
 var optionTwoClick = document.querySelector(".item-2");
-optionTwoClick.addEventListener("click", changeItem);
+optionTwoClick.addEventListener("click", functionTwo);
 
 var optionThreeClick = document.querySelector(".item-3");
-optionThreeClick.addEventListener("click", changeItem);
+optionThreeClick.addEventListener("click", functionThree);
 
 var optionFourClick = document.querySelector(".item-4");
-optionFourClick.addEventListener("click", changeItem);
+optionFourClick.addEventListener("click", functionFour);
