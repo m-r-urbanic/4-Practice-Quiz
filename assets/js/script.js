@@ -12,22 +12,89 @@ var questionOptionFour
 var selectedQuestion
 
 /* create questions and answers as selectable objects */
-var objectTest = {
+var questionOne = {
+    question:"insert here",
     answerOne:"One",
     answerTwo:":)",
     answerThree: "Question",
     answerFour: "Test"
 }
 
-var objectTestTwo = {
+var questionTwo = {
+    question:"insert here",
     answerOne:":(",
     answerTwo:"mtest",
     answerThree: "Testing",
     answerFour: "Yay"
 }
 
+var questionThree = {
+    question:"insert here",
+    answerOne:"One",
+    answerTwo:":)",
+    answerThree: "Question",
+    answerFour: "Test"
+}
+
+var questionFour = {
+    answerOne:":(",
+    answerTwo:"mtest",
+    answerThree: "Testing",
+    answerFour: "Yay"
+}
+
+var questionFive = {
+    question:"insert here",
+    answerOne:"One",
+    answerTwo:":)",
+    answerThree: "Question",
+    answerFour: "Test"
+}
+
+var questionSix = {
+    question:"insert here",
+    answerOne:":(",
+    answerTwo:"mtest",
+    answerThree: "Testing",
+    answerFour: "Yay"
+}
+
+var questionSeven = {
+    question:"insert here",
+    answerOne:"One",
+    answerTwo:":)",
+    answerThree: "Question",
+    answerFour: "Test"
+}
+
+var questionEight = {
+    question:"insert here",
+    answerOne:":(",
+    answerTwo:"mtest",
+    answerThree: "Testing",
+    answerFour: "Yay"
+}
+var questionNine = {
+    question:"insert here",
+    answerOne:"One",
+    answerTwo:":)",
+    answerThree: "Question",
+    answerFour: "Test"
+}
+
+var questionTen = {
+    question:"insert here",
+    answerOne:":(",
+    answerTwo:"mtest",
+    answerThree: "Testing",
+    answerFour: "Yay"
+}
+
+/* make array of possible questions */
+const questionArray = [questionOne, questionTwo, questionThree, questionFour, questionFive, questionSix, questionSeven, questionEight, questionNine, questionTen];
+
 /* change selected question */
-selectedQuestion = objectTestTwo
+selectedQuestion = questionOne
 
 
 
@@ -50,5 +117,7 @@ function changeItem(){
     itemDisplayFour.textContent = questionOptionFour
 
 }
+
+console.log(questionArray[2]);
 
 changeItem();
