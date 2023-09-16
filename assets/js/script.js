@@ -1,16 +1,18 @@
-var questionDisplay = document.querySelector(".question-provided")
-var itemDisplayOne = document.querySelector(".item-1")
-var itemDisplayTwo = document.querySelector(".item-2")
-var itemDisplayThree = document.querySelector(".item-3")
-var itemDisplayFour = document.querySelector(".item-4")
+var questionDisplay = document.querySelector(".question-provided");
+var itemDisplayOne = document.querySelector(".item-1");
+var itemDisplayTwo = document.querySelector(".item-2");
+var itemDisplayThree = document.querySelector(".item-3");
+var itemDisplayFour = document.querySelector(".item-4");
 
-var questionAsk
-var questionOptionOne
-var questionOptionTwo
-var questionOptionThree
-var questionOptionFour
-var selectedQuestion
-var questionArray
+var questionAsk;
+var questionOptionOne;
+var questionOptionTwo;
+var questionOptionThree;
+var questionOptionFour;
+var randomQuestionSelect;
+var selectedQuestion;
+
+var questionArray = [];
 
 /* create questions and answers as selectable objects */
 var questionOne = {
@@ -95,8 +97,34 @@ var questionTen = {
 /* make array of possible questions */
 questionArray = [questionOne, questionTwo, questionThree, questionFour, questionFive, questionSix, questionSeven, questionEight, questionNine, questionTen];
 
+console.log(questionArray[2]);
+
+
+function giveQuestion(){
+    // create function that gets a random type
+    function getRandom(arr) {
+        return arr[Math.floor(Math.random() * arr.length)]
+    }
+
+    // select random question using the random function
+    randomQuestionSelect = getRandom(Object.values(questionArray));
+    console.log(randomQuestionSelect);
+}
+
+giveQuestion();
 /* change selected question */
-selectedQuestion = questionOne
+selectedQuestion = randomQuestionSelect;
+
+
+console.log(selectedQuestion.question)
+console.log(selectedQuestion.answerOne)
+console.log(selectedQuestion.answerTwo)
+console.log(selectedQuestion.answerThree)
+console.log(selectedQuestion.answerFour)
+
+giveQuestion();
+/* change selected question */
+selectedQuestion = randomQuestionSelect;
 
 
 console.log(selectedQuestion.question)
@@ -121,17 +149,5 @@ function changeItem(){
     itemDisplayFour.textContent = questionOptionFour
 
 }
-
-console.log(questionArray[2]);
-
-// create function that gets a random type
-function getRandom(arr) {
-    return arr[Math.floor(Math.random() * arr.length)]
-}
-
-// select random question using the random function
-let randomQuestionSelect = getRandom(Object.values(questionArray));
-
-console.log(randomQuestionSelect);
 
 changeItem();
