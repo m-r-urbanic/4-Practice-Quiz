@@ -123,8 +123,6 @@ console.log(selectedQuestion.answerThree)
 console.log(selectedQuestion.answerFour)
 
 giveQuestion();
-/* change selected question */
-selectedQuestion = randomQuestionSelect;
 
 
 console.log(selectedQuestion.question)
@@ -133,15 +131,20 @@ console.log(selectedQuestion.answerTwo)
 console.log(selectedQuestion.answerThree)
 console.log(selectedQuestion.answerFour)
 
-/* set questions equal to the selected question and the selected question's answer */
-questionAsk = selectedQuestion.question
-questionOptionOne = selectedQuestion.answerOne
-questionOptionTwo = selectedQuestion.answerTwo
-questionOptionThree = selectedQuestion.answerThree
-questionOptionFour = selectedQuestion.answerFour
 
 /* Change list items based on question selected */
 function changeItem(){
+    giveQuestion();
+
+        /* change selected question */
+    selectedQuestion = randomQuestionSelect;   
+    /* set questions equal to the selected question and the selected question's answer */
+    questionAsk = selectedQuestion.question
+    questionOptionOne = selectedQuestion.answerOne
+    questionOptionTwo = selectedQuestion.answerTwo
+    questionOptionThree = selectedQuestion.answerThree
+    questionOptionFour = selectedQuestion.answerFour
+
     questionDisplay.textContent = questionAsk
     itemDisplayOne.textContent = questionOptionOne
     itemDisplayTwo.textContent = questionOptionTwo
@@ -151,3 +154,6 @@ function changeItem(){
 }
 
 changeItem();
+
+var testButton = document.querySelector(".new-question");
+testButton.addEventListener("click", changeItem);
