@@ -1,4 +1,5 @@
 var questionDisplay = document.querySelector(".question-provided");
+var startGame = document.querySelector(".start-game");
 var itemDisplayOne = document.querySelector(".item-1");
 var itemDisplayTwo = document.querySelector(".item-2");
 var itemDisplayThree = document.querySelector(".item-3");
@@ -204,7 +205,7 @@ function setTime() {
   }, 1000);
 }
 
-setTime();
+
 
 function isTrueOne(){
     if (selectedQuestion.correct == 1)
@@ -283,7 +284,8 @@ function functionFour() {
     clickFunction();
 }
 
-
+var startClick = document.querySelector(".start-game");
+startClick.addEventListener("click", setTime);
 
 var optionOneClick = document.querySelector(".item-1");
 optionOneClick.addEventListener("click", functionOne);
