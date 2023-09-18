@@ -3,6 +3,7 @@ var itemDisplayOne = document.querySelector(".item-1");
 var itemDisplayTwo = document.querySelector(".item-2");
 var itemDisplayThree = document.querySelector(".item-3");
 var itemDisplayFour = document.querySelector(".item-4");
+var timerElement = document.querySelector(".timer-count");
 
 /*var questionAsk;
 var questionOptionOne;
@@ -11,6 +12,7 @@ var questionOptionThree;
 var questionOptionFour;*/
 var randomQuestionSelect;
 var selectedQuestion;
+var timerCount;
 
 var questionArray = [];
 
@@ -152,13 +154,49 @@ function changeItem(){
     itemDisplayThree.textContent = selectedQuestion.answerThree
     itemDisplayFour.textContent = selectedQuestion.answerFour
 
-    /* refactorduplicated code */
+    /* delete used question from array of options */
+    getIndex = questionArray.indexOf(selectedQuestion);
+    console.log(getIndex);
+    const removed = questionArray.splice(getIndex,1);
 
-    
+    console.log(questionArray);
 
 }
 
 changeItem();
+
+let counter = 0;
+
+// count how many times the function has been called (used to count clicks)
+function counterItem() { 
+    counter = counter + 1;
+    console.log(counter);
+}
+
+// Selects element by class
+var timeEl = document.querySelector(".time");
+
+// Selects element by id
+var mainEl = document.getElementById("main");
+
+var secondsLeft = 100;
+
+function setTime() {
+  // Sets interval in variable
+  var timerInterval = setInterval(function() {
+    secondsLeft--;
+    timeEl.textContent = secondsLeft + " seconds left.";
+
+    if(secondsLeft === 0) {
+      // Stops execution of action at set interval
+      clearInterval(timerInterval);
+      timeEl.textContent = "Game Over";
+    }
+
+  }, 1000);
+}
+
+setTime();
 
 function isTrueOne(){
     if (selectedQuestion.correct == 1)
@@ -168,10 +206,10 @@ function isTrueOne(){
     else
     {
         console.log("false");
+        secondsLeft = secondsLeft -10;
     }
 }
-isTrueOne();
-    /* refactorduplication code */
+
 function isTrueTwo(){
     if (selectedQuestion.correct == 2)
     {
@@ -180,6 +218,7 @@ function isTrueTwo(){
     else
     {
         console.log("false");
+        secondsLeft = secondsLeft -10;
     }
 }
 
@@ -191,6 +230,7 @@ function isTrueThree(){
     else
     {
         console.log("false");
+        secondsLeft = secondsLeft -10;
     }
 }
 
@@ -203,28 +243,36 @@ function isTrueFour(){
     else
     {
         console.log("false");
+        secondsLeft = secondsLeft -10;
     }
 }
 
+// define functions to be called by each button
 function functionOne() {
     isTrueOne();
     changeItem();
+    counterItem();
 }
 
 function functionTwo() {
     isTrueTwo();
     changeItem();
+    counterItem();
 }
 
 function functionThree() {
     isTrueThree();
     changeItem();
+    counterItem();
 }
 
 function functionFour() {
     isTrueFour();
     changeItem();
+    counterItem();
 }
+
+
 
 var optionOneClick = document.querySelector(".item-1");
 optionOneClick.addEventListener("click", functionOne);
@@ -237,3 +285,4 @@ optionThreeClick.addEventListener("click", functionThree);
 
 var optionFourClick = document.querySelector(".item-4");
 optionFourClick.addEventListener("click", functionFour);
+
