@@ -165,12 +165,20 @@ function changeItem(){
 
 changeItem();
 
-let counter = 0;
+let clickCounter = 0;
 
 // count how many times the function has been called (used to count clicks)
-function counterItem() { 
-    counter = counter + 1;
-    console.log(counter);
+function clickFunction() { 
+    clickCounter = clickCounter + 1;
+    console.log(clickCounter);
+}
+
+let winAmount = 0;
+
+// count how many times the function has been called (used to count clicks)
+function winCounter() { 
+    winAmount = winAmount + 1;
+    console.log("win amount" + winAmount);
 }
 
 // Selects element by class
@@ -202,6 +210,7 @@ function isTrueOne(){
     if (selectedQuestion.correct == 1)
     {
         console.log("true");
+        winCounter();
     }
     else
     {
@@ -226,6 +235,7 @@ function isTrueThree(){
     if (selectedQuestion.correct == 3)
     {
         console.log("true");
+        winCounter();
     }
     else
     {
@@ -239,6 +249,7 @@ function isTrueFour(){
     if (selectedQuestion.correct == 4)
     {
         console.log("true");
+        winCounter();
     }
     else
     {
@@ -251,25 +262,25 @@ function isTrueFour(){
 function functionOne() {
     isTrueOne();
     changeItem();
-    counterItem();
+    clickFunction();
 }
 
 function functionTwo() {
     isTrueTwo();
     changeItem();
-    counterItem();
+    clickFunction();
 }
 
 function functionThree() {
     isTrueThree();
     changeItem();
-    counterItem();
+    clickFunction();
 }
 
 function functionFour() {
     isTrueFour();
     changeItem();
-    counterItem();
+    clickFunction();
 }
 
 
