@@ -284,18 +284,8 @@ function functionFour() {
     clickFunction();
 }
 
-var startClick = document.querySelector(".start-game");
-startClick.addEventListener("click", setTime);
-
-var optionOneClick = document.querySelector(".item-1");
-optionOneClick.addEventListener("click", functionOne);
-
-var optionTwoClick = document.querySelector(".item-2");
-optionTwoClick.addEventListener("click", functionTwo);
-
-var optionThreeClick = document.querySelector(".item-3");
-optionThreeClick.addEventListener("click", functionThree);
-
-var optionFourClick = document.querySelector(".item-4");
-optionFourClick.addEventListener("click", functionFour);
-
+startGame.addEventListener("click", setTime);
+itemDisplayOne.addEventListener("click", functionOne);
+itemDisplayTwo.addEventListener("click", functionTwo);
+itemDisplayThree.addEventListener("click", functionThree);
+itemDisplayFour.addEventListener("click", functionFour);
