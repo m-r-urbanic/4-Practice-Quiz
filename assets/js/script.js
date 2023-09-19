@@ -49,7 +49,7 @@ var questionFour = {
     question:"Four",
     answerOne:":(",
     answerTwo:"mtest",
-    answerThree: "Testing",
+    answerThree: "Testittttttttttttttng teeeeeeeeeee",
     answerFour: "Yay",
     correct: 1
 }
@@ -58,7 +58,7 @@ var questionFive = {
     question:"five",
     answerOne:"One",
     answerTwo:":)",
-    answerThree: "Question",
+    answerThree: "Questtttttttttttion teeeeeeeeeee",
     answerFour: "Test",
     correct: 3
 }
@@ -67,7 +67,7 @@ var questionSix = {
     question:"six",
     answerOne:":(",
     answerTwo:"mtest",
-    answerThree: "Testing",
+    answerThree: "Testingtttttttttttttttttt teeeeeeeeeee",
     answerFour: "Yay",
     correct: 4
 }
@@ -76,7 +76,7 @@ var questionSeven = {
     question:"seven",
     answerOne:"One",
     answerTwo:":)",
-    answerThree: "Question",
+    answerThree: "Questttttttttttttttttttttion teeeeeeeeeee",
     answerFour: "Test",
     correct: 3
 }
@@ -85,7 +85,7 @@ var questionEight = {
     question:"eight",
     answerOne:":(",
     answerTwo:"mtest",
-    answerThree: "Testing",
+    answerThree: "Testitttttttttttttng teeeeeeeeeee",
     answerFour: "Yay",
     correct: 1
 }
@@ -93,7 +93,7 @@ var questionNine = {
     question:"nine",
     answerOne:"One",
     answerTwo:":)",
-    answerThree: "Question",
+    answerThree: "Questtttttttttttttttttion",
     answerFour: "Test",
     correct: 4
 }
@@ -102,7 +102,7 @@ var questionTen = {
     question:"ten",
     answerOne:":(",
     answerTwo:"mtest",
-    answerThree: "Testing",
+    answerThree: "Testtttttttttttttting",
     answerFour: "Yay",
     correct: 3
 }
@@ -190,12 +190,14 @@ var mainEl = document.getElementById("main");
 
 var secondsLeft = 100;
 
-function setTime() {
-  // Sets interval in variable
-  var timerInterval = setInterval(function() {
+function startTimer() {
+    // Start the timer
+    // Sets interval in variable
+    var timerInterval = setInterval(function() {
     secondsLeft--;
     timeEl.textContent = secondsLeft + " seconds left.";
 
+    // When the time runs out
     if(secondsLeft === 0) {
       // Stops execution of action at set interval
       clearInterval(timerInterval);
@@ -205,6 +207,14 @@ function setTime() {
   }, 1000);
 }
 
+function hideStart() {
+    var toggleStart = document.getElementById("start-card");
+    if (toggleStart.style.display === "none") {
+      toggleStart.style.display = "block";
+    } else {
+      toggleStart.style.display = "none";
+    }
+}
 
 
 function isTrueOne(){
@@ -259,7 +269,14 @@ function isTrueFour(){
     }
 }
 
+startTimer();
+
 // define functions to be called by each button
+function startGame() {
+
+
+    
+}
 function functionOne() {
     isTrueOne();
     changeItem();
@@ -284,7 +301,7 @@ function functionFour() {
     clickFunction();
 }
 
-startGame.addEventListener("click", setTime);
+startGame.addEventListener("click",hideStart);
 itemDisplayOne.addEventListener("click", functionOne);
 itemDisplayTwo.addEventListener("click", functionTwo);
 itemDisplayThree.addEventListener("click", functionThree);

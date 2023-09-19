@@ -6,3 +6,5 @@ Quiz to practice coding knowledge
 How to call multiple javascript functions in onclick event, Stack Overflow, https://stackoverflow.com/questions/3910736/how-to-call-multiple-javascript-functions-in-onclick-event
 
 How to increment one or more counters with Javascript?, tutorialspoint, https://www.tutorialspoint.com/How-to-increment-one-or-more-counters-with-JavaScript
+
+Stack buttons vertically, stackoverflow, https://stackoverflow.com/questions/42517956/stack-buttons-vertically

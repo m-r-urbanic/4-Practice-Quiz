@@ -1,0 +1,38 @@
+.time {
+    text-align: right;
+    margin-top: -55px;
+}
+
+/* define the header */
+header {
+    padding: 10px;
+    border: solid;
+    border-width: 5px;
+    border-color: black;
+    background-color: blue;
+}
+
+/* define all of the sections that will be used, keep the same styling of flex box */
+section {
+    display: flex;
+    padding: 10px;
+    border: solid;
+    width: 35%;
+    border-width: 5px;
+    border-color: black;
+    text-align:center;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: column;
+}
+
+/* make all buttons centered flex boxes witha max size for the button to grow */
+button {
+    display: flex;
+    width: 75%;
+    max-width: 200px;
+    text-align:center;
+    margin-left: auto;
+    margin-right: auto;
+
+}
