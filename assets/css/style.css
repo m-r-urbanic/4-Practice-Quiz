@@ -7,6 +7,7 @@
 header {
     padding: 10px;
     border: solid;
+    min-height: 75px;
     border-width: 5px;
     border-color: black;
     background-color: blue;
@@ -16,6 +17,7 @@ header {
 section {
     display: flex;
     padding: 10px;
+    margin: 1rem 0 1rem 0;
     border: solid;
     width: 35%;
     border-width: 5px;

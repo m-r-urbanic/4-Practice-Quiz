@@ -269,11 +269,10 @@ function isTrueFour(){
     }
 }
 
-startTimer();
-
 // define functions to be called by each button
-function startGame() {
-
+function beginGame() {
+    startTimer();
+    hideStart();
 
     
 }
@@ -301,7 +300,7 @@ function functionFour() {
     clickFunction();
 }
 
-startGame.addEventListener("click",hideStart);
+startGame.addEventListener("click",beginGame);
 itemDisplayOne.addEventListener("click", functionOne);
 itemDisplayTwo.addEventListener("click", functionTwo);
 itemDisplayThree.addEventListener("click", functionThree);
