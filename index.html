@@ -10,22 +10,35 @@
 <body>
     <!-- header -->
     <header>
-        <h1>Word Guess Game</h1>
+        <h1>Quiz</h1>
+        <h3 class="time"></h3>
+        <div id="main"></div>
     </header>
 
+    
 
     <main>
-        <!-- create card that will display randomly selected question-->
-        <div class="card questions">
-            <div class = "questions-container">
-            <div>
-            <h2>Question: <span class="questions"></span>Test Question</h2>
-            <li><span class="item-1"></span>One</li>
-            <li><span class="item-2"></span>Two</li>
-            <li><span class="item-3"></span>Thress</li>
-            <li><span class="item-4"></span>Four</li>
-        </div>
 
+        <section id ="start-card">
+            <button class="start-game">Start Game</button>
+        </section>
+
+        <!-- create card that will display randomly selected question-->
+        <section id = "questions-card">
+            <h2>Question: <span class="question-provided"></span>Test Question</h2>
+            <button class="item-1"></button>
+            <button class="item-2"></button>
+            <button class="item-3"></button>
+            <button class="item-4"></button>
+        </section>
+
+        <section id = "self-card">
+            
+        </section>
+
+        <section id = "results-card">
+            
+        </section>
     </main>
 
     <script type="text/javascript" src="./assets/js/script.js"></script>
