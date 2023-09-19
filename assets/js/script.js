@@ -5,6 +5,9 @@ var itemDisplayTwo = document.querySelector(".item-2");
 var itemDisplayThree = document.querySelector(".item-3");
 var itemDisplayFour = document.querySelector(".item-4");
 var timerElement = document.querySelector(".timer-count");
+var hideQuestions = document.getElementById("questions-card");
+var hideSelf = document.getElementById("self-card");
+var hideResults = document.getElementById("results-card");
 
 /*var questionAsk;
 var questionOptionOne;
@@ -14,6 +17,11 @@ var questionOptionFour;*/
 var randomQuestionSelect;
 var selectedQuestion;
 var timerCount;
+
+/* hide sections */
+hideQuestions.style.display = "none";
+hideSelf.style.display = "none";
+hideResults.style.display = "none";
 
 var questionArray = [];
 
@@ -164,8 +172,6 @@ function changeItem(){
 
 }
 
-changeItem();
-
 let clickCounter = 0;
 
 // count how many times the function has been called (used to count clicks)
@@ -210,13 +216,38 @@ function startTimer() {
 function hideStart() {
     var toggleStart = document.getElementById("start-card");
     if (toggleStart.style.display === "none") {
-      toggleStart.style.display = "block";
+        toggleStart.style.display = "block";
     } else {
-      toggleStart.style.display = "none";
+        toggleStart.style.display = "none";
     }
 }
 
+function showQuestion() {
+    var toggleStart = document.getElementById("questions-card");
+    if (toggleStart.style.display === "block") {
+        toggleStart.style.display = "none";
+    } else {
+        toggleStart.style.display = "block";
+    }
+}
 
+function showNameEntry() {
+    var toggleStart = document.getElementById("self-card");
+    if (toggleStart.style.display === "block") {
+        toggleStart.style.display = "none";
+    } else {
+        toggleStart.style.display = "block";
+    }
+}
+
+function showResults() {
+    var toggleStart = document.getElementById("results-card");
+    if (toggleStart.style.display === "block") {
+        toggleStart.style.display = "none";
+    } else {
+        toggleStart.style.display = "block";
+    }
+}
 function isTrueOne(){
     if (selectedQuestion.correct == 1)
     {
@@ -273,7 +304,8 @@ function isTrueFour(){
 function beginGame() {
     startTimer();
     hideStart();
-
+    changeItem();
+    showQuestion();
     
 }
 function functionOne() {
